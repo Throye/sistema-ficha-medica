@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha Médica - Sistema V&V</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Registro de Ficha Médica</h2>
+
+        <!-- Seccion de busqueda -->
+        <div class="buscador">
+            <input type="text" id="busquedaApellido" placeholder="Buscar por Apellido...">
+            <button type="button" id="btnBuscar" class="btn-buscador">Buscar</button>
+        </div>
+
+        <!-- formulario con los 10 campos requeridos -->
+        <form id="formFicha">
+            <div class="form-group">
+                <label for="rut">RUT:</label>
+                <input type="text" id="rut" required placeholder="12.345.678-9">
+            </div>
+            <div class="form-group">
+                <label for="nombres">Nombres:</label>
+                <input type="text" id="nombres" required>
+            </div>
+            <div class="form-group">
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" id="apellidos" required>
+            </div>
+            <div class="form-group">
+                <label for="direccion">Dirección:</label>
+                <input type="text" id="direccion" required>
+            </div>
+            <div class="form-group">
+                <label for="ciudad">Ciudad:</label>
+                <input type="text" id="ciudad" required>
+            </div>
+            <div class="form-group">
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+                <input type="date" id="fechaNacimiento" required>
+            </div>
+            <div class="form-group">
+                <label for="estadoCivil">Estado Civil:</label>
+                <select id="estadoCivil" required>
+                    <option value="">Seleccione...</option>
+                    <option value="Soltero/a">Soltero/a</option>
+                    <option value="Casado/a">Casado/a</option>
+                    <option value="Viudo/a">Viudo/a</option>
+                    <option value="Divorciado/a">Divorciado/a</option>
+                </select>
+            </div>
+            <div class="form-group full-width">
+                <label for="comentarios">Comentarios / Observaciones</label>
+                <textarea id="comentarios" rows="3"></textarea>
+            </div>
+
+            <!-- botones de accione obligatorios -->
+             <div class="button-group full-width">
+                <button type="submit" class="btn-guardar">Guardar</button>
+                <button type="button" id="btnLimpiar" class="btn-limpiar">Limpiar</button>
+                <button type="button" id="btnCerrar" class="btn-cerrar">Cerrar</button>
+             </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
