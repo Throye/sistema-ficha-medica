@@ -13,22 +13,22 @@
         <!-- Seccion de busqueda -->
         <div class="buscador">
             <input type="text" id="busquedaApellido" placeholder="Buscar por Apellido...">
-            <button type="button" id="btnBuscar" class="btn-buscador">Buscar</button>
+            <button type="button" id="btnBuscar" class="btn-buscar">Buscar</button>
         </div>
 
         <!-- formulario con los 10 campos requeridos -->
         <form id="formFicha">
             <div class="form-group">
                 <label for="rut">RUT:</label>
-                <input type="text" id="rut" required placeholder="12.345.678-9">
+                <input type="text" id="rut" required inputmode="text" maxlength="12" pattern="(?:[0-9]{1,2}|[0-9]{1,2}\.[0-9]{3}|[0-9]{1,2}\.[0-9]{3}\.[0-9]{3})-[0-9Kk]" title="Ingrese un RUT válido, por ejemplo 12.345.678-5." placeholder="12.345.678-5">
             </div>
             <div class="form-group">
                 <label for="nombres">Nombres:</label>
-                <input type="text" id="nombres" required>
+                <input type="text" id="nombres" required pattern="[\p{L}]+(?:\s+[\p{L}]+)*" title="Use solo letras y espacios.">
             </div>
             <div class="form-group">
                 <label for="apellidos">Apellidos:</label>
-                <input type="text" id="apellidos" required>
+                <input type="text" id="apellidos" required pattern="[\p{L}]+(?:\s+[\p{L}]+)*" title="Use solo letras y espacios.">
             </div>
             <div class="form-group">
                 <label for="direccion">Dirección:</label>
